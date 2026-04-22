@@ -34,7 +34,7 @@ textErr.value=null
 
 watch(load,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetchPost("/api/settingsPassw", {
+const {answer, error}=await useFetchPost("https://shopnode.vercel.app/api/settingsPassw", {
 id: storeClient.client.id,
 password: oldPassw.value,
 passwordNew: newPassw.value

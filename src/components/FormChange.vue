@@ -20,7 +20,7 @@ const storeClient=useClientStore()
 
 watch(load,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetchPost("/api/settings", {
+const {answer, error}=await useFetchPost("https://shopnode.vercel.app/api/settings", {
 id: storeClient.client.id,
 name: name.value,
 tel: tel.value,

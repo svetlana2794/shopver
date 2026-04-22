@@ -44,7 +44,7 @@ win.value=false
 
 watch(() => route.params,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetch("/api/product/"+route.params.id)
+const {answer, error}=await useFetch("https://shopnode.vercel.app/api/product/"+route.params.id)
 product.value=answer.value
 textErr.value=error.value
 }, {

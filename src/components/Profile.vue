@@ -23,7 +23,7 @@ router.push("/login")
 
 watch(orders,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetch("/api/orders/"+storeClient.client.id)
+const {answer, error}=await useFetch("https://shopnode.vercel.app/api/orders/"+storeClient.client.id)
 if (answer.value) {
 orders.value=answer.value
 }

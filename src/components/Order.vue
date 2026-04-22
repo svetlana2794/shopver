@@ -51,7 +51,7 @@ load.value=true
 
 watch(order,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetchPost("/api/addOrder", order.value)
+const {answer, error}=await useFetchPost("https://shopnode.vercel.app/api/addOrder", order.value)
 if (answer.value) {
 storeCart.cart.length=0
 localStorage.removeItem("cart")

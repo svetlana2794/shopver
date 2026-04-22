@@ -20,7 +20,7 @@ const storeClient=useClientStore(
 
 watch(load,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetchPost("/api/login", {
+const {answer, error}=await useFetchPost("https://shopnode.vercel.app/api/login", {
 tel: tel.value,
 password: password.value
 })

@@ -14,7 +14,7 @@ const route=useRoute()
 
 watch(() => route.params,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetch("/api/order/"+route.params.id)
+const {answer, error}=await useFetch("https://shopnode.vercel.app/api/order/"+route.params.id)
 if (answer.value) {
 orderData.value=answer.value
 }

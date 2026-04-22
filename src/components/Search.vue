@@ -16,7 +16,7 @@ list.value.length=0
 
 watch(search, async (newValue, oldValue) => {
 if (newValue.length>0) {
-let url=new URL("http://localhost:3000/api/search")
+let url=new URL("https://shopnode.vercel.app/api/search")
 url.searchParams.append("clothes", search.value)
 const {answer}=await useFetch(url)
 list.value=answer.value

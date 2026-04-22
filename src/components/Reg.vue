@@ -32,7 +32,7 @@ textErr.value=null
 
 watch(load,
 async (newValue, oldValue) => {
-const {answer, error}=await useFetchPost("/api/reg", {
+const {answer, error}=await useFetchPost("https://shopnode.vercel.app/api/reg", {
 name: name.value,
 tel: tel.value,
 email: email.value,
