@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@font-face {
+font-family: "Tilda Script";
+src: url("styles/tilda-script-non-connect-bold.woff2") format("woff2");
+font-weight: 700;
+font-style: italic;
+font-display: swap;
+}
+
+#app, html, body {
+height: 100%;
+}
+
