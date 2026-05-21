@@ -13,9 +13,9 @@
     <script>
 let p=document.querySelector("p")
 let response=await fetch("https://shopnode.vercel.app", {
-headers: {
-Origin: "https://shopnode.vercel.app"
-}
+method: 'GET',
+  credentials: 'include'
+
 })
 p.innerText=await response.text()
 </script>
