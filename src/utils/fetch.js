@@ -7,9 +7,8 @@ export async function useFetch(url) {
 
   try {
    let response=await fetch(url, {
-	headers: {
-		Origin: "https://shopnode.vercel.app"
-	}
+	method: "GET",
+	credentials: 'include'
 	})
    answer.value=await response.json()
   } catch {
