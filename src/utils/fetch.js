@@ -6,7 +6,11 @@ export async function useFetch(url) {
   const error = ref(null)
 
   try {
-   let response=await fetch(url)
+   let response=await fetch(url, {
+	headers: {
+		Origin: "https://shopnode.vercel.app"
+	}
+	})
    answer.value=await response.json()
   } catch {
    error.value="Неизвестная ошибка"
