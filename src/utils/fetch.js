@@ -6,10 +6,7 @@ export async function useFetch(url) {
   const error = ref(null)
 
   try {
-   let response=await fetch(url, {
-	method: "GET",
-	credentials: 'include'
-	})
+   let response=await fetch(url)
    answer.value=await response.json()
   } catch {
    error.value="Неизвестная ошибка"

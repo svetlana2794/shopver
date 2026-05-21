@@ -7,17 +7,7 @@
     <title>Vite App</title>
   </head>
   <body>
-  	<p>qwerty</p>
     <div id="app" class="flex flex-col justify-between items-stretch"></div>
     <script type="module" src="/src/main.js"></script>
-    <script>
-let p=document.querySelector("p")
-let response=await fetch("https://shopnode.vercel.app/catalog", {
-method: 'GET',
-  credentials: 'include'
-
-})
-p.innerHTML=await response.json()
-</script>
   </body>
 </html>
